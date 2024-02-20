@@ -51,3 +51,21 @@ from EmployeeErrors
 
 Select EmployeeName, LOWER(EmployeeName) As LowerName
 from EmployeeErrors
+
+-- CONCAT() returns concatenated string
+SELECT CONCAT('abc','def');
+
+SELECT CONCAT('abc',' ','def');
+
+-- LEFT() returns the leftmost number of characters as specified
+SELECT LEFT('asdfhgl',4)
+
+-- RIGHT() returns the rightmost number of characters as specified
+SELECT Right('asdfhgl',4)
+
+-- Length() returns the length of a string
+Select LEN('adfghgf')
+
+
+-- Reverse() reverse the order of characters in a string
+Select REVERSE('apple')
