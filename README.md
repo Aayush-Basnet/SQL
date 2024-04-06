@@ -1,7 +1,7 @@
 # SQL
 Here is where I will keep logs of what I am learning!
----------------------------------------------------------------------------
 
+---------------------------------------------------------------------------
 ## Welcome to "SQL-Learning" For Data Analysis!
 * In this Git repo, I'll embark on a SQL learning adventure to become a SQL master. Over the next couple of weeks, I'll dive into the world of databases, queires, and data manipulation!
 * Get ready to explore SQL fundamentals, tackle complex JOINS, unleash the power of subqueries, and discouver the magic of aggregate functions. With each passing day, I'll levelup my SQL skills.
@@ -25,7 +25,7 @@ Day 37+      | Advance SQL
 
 
 # DAY 1 of 'Learning SQL'
-----------------------------------------------------------------
+
 
 ### What is SQL?
   SQL (Structured Query Language) is a standard language for accessing and manipulating database. SQL Lets you access and manipulate database.
@@ -52,7 +52,7 @@ Data Manipulation Language (DML) |DML commands are used to manipulate and retrie
 
 
 # DAY 2
-------------------------------------------------------------------------
+
 * Today I learn about SQL syntax used during data analysis.
 SQL statement consists of keyworks.
   Some of the most important SQL commands
@@ -69,15 +69,6 @@ SQL statement consists of keyworks.
   *	DROP INDEX – deletes an index
 
 
-<details>
-  <summary>DataTypes</summary>
-  <p>
-    [] INTEGER: signed four-byte integer
-    [] VARCHAR(n): variable-length character string with maximum length 'n'
-    [] TEXT: variable-length character string without any lenght limit
-    [] CHAR(n) : fixed-length character string with length 'n'
-  </p>
-</details>
 
 ### Data Definition Language 
 SQL Commands   |  Description
@@ -89,3 +80,11 @@ TRUNCATE      | This is used to remove all records from a table, including all s
 
 
 # DAY 3
+* CREATE Table
+  ![](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Create%20Table.png)
+* ALTER Table
+  ![](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Alter%20Table.png)
+* DROP Table
+  ![](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Drop%20Table.png)
+* TRUNCATE Table
+  ![](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Truncate%20Table.png)
