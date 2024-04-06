@@ -80,13 +80,13 @@ TRUNCATE      | This is used to remove all records from a table, including all s
 
 
 # DAY 3
-# * CREATE Table
+###  CREATE Table
   ![](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Create%20Table.png)
 
 
-# * ALTER Table
+###  ALTER Table
   ![](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Alter%20Table.png)
-# * DROP Table
+###  DROP Table
   ![](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Drop%20Table.png)
-# * TRUNCATE Table
+###  TRUNCATE Table
   ![](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Truncate%20Table.png)
