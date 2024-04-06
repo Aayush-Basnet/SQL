@@ -21,3 +21,28 @@ Day 30       | Temporary Tables
 Day 31-34    | String Functions
 Day 35-36    | Ranking Function
 Day 37+      | Advance SQL
+
+
+
+# Day 1 of 'Learning SQL'
+
+### What is SQL?
+  SQL (Structured Query Language) is a standard language for accessing and manipulating database. SQL Lets you access and manipulate database.
+  Although SQL is an ANSI/ISO standard, there are different versions of the SQL language. However, to be compliant with ANSI standard, they all support at least the major commands (such as SELECT, UPDATE, DELETE, INSERT, WHERE) in a similar manners.
+
+What can SQL do? 
+* Insert, update, delete record from database
+* Create new database
+* Create new tables in a database
+* Execute queries against a database
+* Retrieve data from database
+
+## Database Management System (DBMS)
+   DBMS is a collection of program that enables you to enter the data to the database, organize the data in the database and select data from the database.
+   DBMS manages the process of storing and retrieving data as well as providing users access to the database,
+### DBMSSoftware
+
+* Oracle             * SQ Lite           * Microsoft SQL
+* IBM DB             * MySQL             * PostgreSQL
+* Hadoop DB          * MySQL
+  
