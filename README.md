@@ -1,6 +1,6 @@
 # SQL
 Here is where I will keep logs of what I am learning!
-
+---------------------------------------------------------------------------
 
 ## Welcome to "SQL-Learning" For Data Analysis!
 * In this Git repo, I'll embark on a SQL learning adventure to become a SQL master. Over the next couple of weeks, I'll dive into the world of databases, queires, and data manipulation!
@@ -24,7 +24,8 @@ Day 37+      | Advance SQL
 
 
 
-# Day 1 of 'Learning SQL'
+# DAY 1 of 'Learning SQL'
+----------------------------------------------------------------
 
 ### What is SQL?
   SQL (Structured Query Language) is a standard language for accessing and manipulating database. SQL Lets you access and manipulate database.
@@ -50,5 +51,41 @@ Data Definition Language (DDL) | DDL commands are used to define and manage the 
 Data Manipulation Language (DML) |DML commands are used to manipulate and retrieve data within the database. | SELECT, INSERT, UPDATE, DELETE.
 
 
+# DAY 2
+------------------------------------------------------------------------
+* Today I learn about SQL syntax used during data analysis.
+SQL statement consists of keyworks.
+  Some of the most important SQL commands
+  *	SELECT – Extracts data from database
+  *	UPDATE – update data in a database
+  *	DELETE – delete data from a database
+  *	INSERT INTO – Insert new data into a database
+  *	CREATE DATABASE – creates a database
+  *	ALTER DATABASE – modifies a database
+  *	CREATE TABLE – creates a new table
+  *	ALTER TABLE – modifies a table
+  *	DROP TABLE – delete a table
+  *	CREATE INDEX – creates an index (search key)
+  *	DROP INDEX – deletes an index
 
-  
+
+<details>
+  <summary>DataTypes</summary>
+  <p>
+    [] INTEGER: signed four-byte integer
+    [] VARCHAR(n): variable-length character string with maximum length 'n'
+    [] TEXT: variable-length character string without any lenght limit
+    [] CHAR(n) : fixed-length character string with length 'n'
+  </p>
+</details>
+
+### Data Definition Language 
+SQL Commands   |  Description
+---------------|-------------
+CREATE         |This command is used to create the database or its objects (like table, index, function, views, store procedure, and triggers)
+ALTER         | 	This is used to alter the structure of the database.
+DROP          | This command is used to delete objects from the database.
+TRUNCATE      | This is used to remove all records from a table, including all spaces allocated for the records are removed.
+
+
+# DAY 3
