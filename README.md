@@ -38,11 +38,17 @@ What can SQL do?
 * Retrieve data from database
 
 ## Database Management System (DBMS)
-   DBMS is a collection of program that enables you to enter the data to the database, organize the data in the database and select data from the database.
-   DBMS manages the process of storing and retrieving data as well as providing users access to the database,
-### DBMSSoftware
+  * DBMS is a collection of program that enables you to enter the data to the database, organize the data in the database and select data from the database.
+  * DBMS manages the process of storing and retrieving data as well as providing users access to the database,
+### DBMS Software
+Oracle, SQ Lite, MicroSoft SQL, IBM DB, MySQL, PostgreSQL, Hadoop HDF
 
-* Oracle             * SQ Lite           * Microsoft SQL
-* IBM DB             * MySQL             * PostgreSQL
-* Hadoop DB          * MySQL
+
+SQL   |  Description    | Commands
+----- |---------------- |------------
+Data Definition Language (DDL) | DDL commands are used to define and manage the structure of the database, including tables, views, indexes, and constraints. |CREATE, ALTER, DROP, TRUNCATE, RENAME
+Data Manipulation Language (DML) |DML commands are used to manipulate and retrieve data within the database. | SELECT, INSERT, UPDATE, DELETE.
+
+
+
   
