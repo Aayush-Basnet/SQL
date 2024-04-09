@@ -130,7 +130,12 @@ SELECT column1, column2, ...
 FROM table_name
 ;
 ```
-![alt text]()
+Example:
+```SQL
+SELECT *
+FROM Customer
+```
+
 :large_blue_diamond: SQL SELECT DISTINCT Statement
 The ```SELECT DISTINCT``` Statement is used to return only distinct(different) values
 
@@ -139,7 +144,12 @@ SELECT DISTINCT column1, column2, ...
 FROM table_name
 ;
 ```
-![alt text]()
+```SQL
+SELECT DISTINCT CustomerName
+FROM Customer
+// Ignore duplicate name
+;
+```
 
 :large_blue_diamond: SQL WHERE Clause
 The ```WHERE``` clause is used to filter records. It is used to extract only those records that fulfill specified condition.
@@ -150,18 +160,31 @@ FROM table_name
 WHERE Contion
 ;
 ```
-![alt text]()
+
+Example
+```SQL
+SELECT *
+FROM Customer
+WHERE Country = 'Mexico'
+;
+```
 
 
 :large_blue_diamond: COUNT:
 COUNT() is a built in function that retrieves the number of rows that matches the query crietaria .
 ```SQL
-SELECT COUNT(*)
+SELECT COUNT(column_name)
 FROM table_name
 WHERE Condition
 ;
 ```
-![alt text]()
+Example:
+```SQL
+SELECT COUNT(*)
+FROM Customer
+;
+```
+
 
 # Day 5 & 6
 * Today I learn about the Data Manipulation Languages and it's commands
@@ -230,13 +253,11 @@ WHERE Country = 'Brazil';
 ```
 
 Deleting all records from table
-Example:
 ```SQL
 DELETE From Customer;
 ```
 
 To delete table completely
-Example:
 ```SQL
 DROP TABLE Customer
 ```
@@ -244,9 +265,9 @@ DROP TABLE Customer
 # Day 7
 * Today I learn about different SQL Clauses. Here I learn about LIMIT, ORDER BY
 SQL Commands   |  Description
----------------|-------------
-LIMIT         |The LIMIT clause is used to restrict the number of rows returned by a SELECT statement
-ORDER BY         | 	The ORDER BY statement allows us to sort our results using the data in any column.
+-------------- | -------------
+LIMIT          |The LIMIT clause is used to restrict the number of rows returned by a SELECT statement
+ORDER BY       | 	The ORDER BY statement allows us to sort our results using the data in any column.
 
 :large_blue_diamond:LIMIT: 
 LIMIT is used for restricting the number of rows retrieved from databases.
