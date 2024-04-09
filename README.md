@@ -11,11 +11,11 @@ Here is where I will keep logs of what I am learning!
 # Learning Logs
 Days         | Skill learned  | Topic Content
 ----------   | -------------  | -------------
-Day 1-6      | Basic SQL      | SQL, DBMS, SQL Commands, DDL, DML
-Day 7-9      | Aggregrate Function, LIKE & Wildcards, Aliases  |
-Day 10-17    | Intermediate SQL  |
-Day 18-21    | SQLJoins  |
-Day 22-24    | CASE Statement  |
+Day 1-7      | Basic SQL      | SQL, DBMS, SQL Commands, DDL, DML
+Day 8-9      | Aggregrate Function, LIKE & Wildcards, Aliases  | AVG, MIN, MAX, SUM, COUNT,AS, IN, TOP, LIKE
+Day 10-13    | SQL Joins  | Inner Join, Outer Join, Self Join, Cartesian Product
+Day 18-21    | Intermediate SQL  | UNION, GROUP BY, HAVING, EXISTS, PARTITION BY
+Day 22-24    | CASE Statement  | CASE
 Day 25-29    | Common Table Expression  |
 Day 30       | Temporary Tables   |
 Day 31-34    | String Functions  |
@@ -460,19 +460,18 @@ syntax:
 ```SQL
 SELECT AVG(column_name)
 FROM table_name
-WHERE Condition
-;
+WHERE Condition;
 ```
 
 Example
 ```SQL
 SELECT AVG(price)
-FROM Order
-;
+FROM Order;
+```
 
 # Day 9
 
-## SQL NULL Values
+:large_blue_diamond: SQL NULL Values
 A field with ```NULL Values``` is a field with no value. We will have to use ```IS NULL``` or  ```IS NOT NULL``` operator
 syntax:
 ```SQL
@@ -482,3 +481,92 @@ WHERE column_name IS NULL
 ;
 ```
 
+:large_blue_diamond: SQL SELECT TOP
+The ```SELECT TOP``` clause is used to specify the number of records to return
+Example:
+```SQL
+// Select only first 3 records of Customer
+SELECT TOP 3 *
+FROM Customer;
+
+// SQL TOP Percent
+Select Top 50 PERCENT
+FROM Customer;
+
+```
+Note: Not all database system support the ```SELECT TOP``` clause. MYSQL support ```LIMIT```, while ORACLE use FETCH FIRST n Rows only and ROWNUM 
+
+:large_blue_diamond: SQL Aliases
+An ```Alias``` is creates with ```AS``` keyword. It is used to give temporary name to columns
+Example
+```SQL
+SELECT AVG(price) AS average_price
+FROM Order;
+```
+When Joining two tables
+```SQL
+SELECT o.orderID, o.orderDate, c.CustomerName
+FROM Customer c,
+order o
+WHERE c.customerName ='ABC' AND C.customerID = o.CustomerID;
+```
+
+:large_blue_diamond: SQL IN 
+```IN``` operator allows you to specify multiple values in WHERE clause
+syntax
+```SQL
+SELECT column1, column2,.....
+FROM table_name
+WHERE column_name IN (value1, value2,.......)
+```
+Example
+```SQL
+SELECT *
+FROM Customers
+WHERE Country IN ('France','Brazil');
+```
+
+## SQL LIKE & WILDCARDS
+```LIKE``` operator is used in a WHERE clause to search for a specified pattern in a column
+syntax
+```SQL
+SELECT column1, column2,.....
+FROM table_name
+WHERE column LIKE pattern;
+```
+The Wildcards
+```_Wildcard``` represent a single character
+Example
+```SQL
+SELECT *
+FROM Customer
+WHERE City LIKE 'L_nd_n';
+// It display values where city is London
+```
+The % Wildcard represent any number of characters, even characters.
+```SQL
+SELECT *
+FROM Customer
+WHERE City LIKE '%L%';
+// It display values where city contain letter L. Example: London, Berlin, Marseille
+
+// Select all customers that ends with 'a'
+SELECT *
+FROM Customer
+WHERE Customer_Name LIKE '%a';
+
+// Return all customers that starts with 'a' and are atleast 3 character in length
+SELECT *
+FROM Customer
+WHERE Customer_Name LIKE 'a___%';
+
+// Return all customers starting with either 'b', 's', or 'p'
+SELECT *
+FROM Customer
+WHERE Customer_Name LIKE '[bsp]%';
+
+// Return all customers starting with 'a','b','c','d', 'e', or 'f'
+SELECT *
+FROM Customer
+WHERE Customer_Name LIKE '[a-f]%';
+```
