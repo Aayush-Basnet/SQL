@@ -51,8 +51,6 @@ Data Definition Language (DDL) | DDL commands are used to define and manage the 
 Data Manipulation Language (DML) |DML commands are used to manipulate and retrieve data within the database. | SELECT, INSERT, UPDATE, DELETE.
 
 
-# DAY 2
-
 * Today I learn about SQL syntax used during data analysis.
 SQL statement consists of keyworks.
   Some of the most important SQL commands
@@ -79,7 +77,7 @@ DROP          | This command is used to delete objects from the database.
 TRUNCATE      | This is used to remove all records from a table, including all spaces allocated for the records are removed.
 
 
-# DAY 3
+# DAY 2
 ###  CREATE Table
 It is used to create table in a database.
 syntax:
@@ -119,7 +117,7 @@ TRUNCATE TABLE table_name;
 ```
   ![alt text](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Truncate%20Table.png)
 
-# Day 4
+# Day 3
 
 :large_blue_diamond: SQL SELECT Statement
 * The ```SELECT``` Statement is used to select data from database
@@ -171,7 +169,7 @@ WHERE Country = 'Mexico'
 
 
 
-# Day 5 & 6
+# Day 4 & 5
 * Today I learn about the Data Manipulation Languages and it's commands
 
 
@@ -247,7 +245,7 @@ To delete table completely
 DROP TABLE Customer
 ```
 
-# Day 7
+# Day 6 & 7
 
 SQL Commands   |  Description
 -------------- | -------------
