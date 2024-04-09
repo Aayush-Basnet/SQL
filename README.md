@@ -9,18 +9,18 @@ Here is where I will keep logs of what I am learning!
 
 
 # Learning Logs
-Days         | Skill learned
-----------   | -------------
-Day 1-6      | Basic SQL
-Day 7-9      | Aggregrate Function
-Day 10-17    | Intermediate SQL
-Day 18-21    | SQLJoins
-Day 22-24    | CASE Statement
-Day 25-29    | Common Table Expression
-Day 30       | Temporary Tables
-Day 31-34    | String Functions
-Day 35-36    | Ranking Function
-Day 37+      | Advance SQL
+Days         | Skill learned  | Topic Content
+----------   | -------------  | -------------
+Day 1-6      | Basic SQL      | SQL, DBMS, SQL Commands, DDL, DML
+Day 7-9      | Aggregrate Function, LIKE & Wildcards, Aliases  |
+Day 10-17    | Intermediate SQL  |
+Day 18-21    | SQLJoins  |
+Day 22-24    | CASE Statement  |
+Day 25-29    | Common Table Expression  |
+Day 30       | Temporary Tables   |
+Day 31-34    | String Functions  |
+Day 35-36    | Ranking Function  |
+Day 37+      | Advance SQL  |
 
 
 
@@ -170,21 +170,6 @@ WHERE Country = 'Mexico'
 ```
 
 
-:large_blue_diamond: COUNT:
-COUNT() is a built in function that retrieves the number of rows that matches the query crietaria .
-```SQL
-SELECT COUNT(column_name)
-FROM table_name
-WHERE Condition
-;
-```
-Example:
-```SQL
-SELECT COUNT(*)
-FROM Customer
-;
-```
-
 
 # Day 5 & 6
 * Today I learn about the Data Manipulation Languages and it's commands
@@ -263,11 +248,13 @@ DROP TABLE Customer
 ```
 
 # Day 7
-* Today I learn about different SQL Clauses. Here I learn about LIMIT, ORDER BY
+
 SQL Commands   |  Description
 -------------- | -------------
-LIMIT          |The LIMIT clause is used to restrict the number of rows returned by a SELECT statement
-ORDER BY       | 	The ORDER BY statement allows us to sort our results using the data in any column.
+LIMIT          | The LIMIT clause is used to restrict the number of rows returned by a SELECT statement
+ORDER BY       | The ORDER BY statement allows us to sort our results using the data in any column
+Operators      | Operators are used to give result based on condition applied
+
 
 :large_blue_diamond:LIMIT: 
 LIMIT is used for restricting the number of rows retrieved from databases.
@@ -388,3 +375,110 @@ FROM Customer
 WHERE City LIKE 's%'  // City name that started by S
 ; 
 ```
+
+# Day 8
+
+:large_blue_diamond: COUNT:
+COUNT() is a built in function that retrieves the number of rows that matches the query crietaria .
+```SQL
+SELECT COUNT(column_name)
+FROM table_name
+WHERE Condition
+;
+```
+Example:
+```SQL
+SELECT COUNT(*)
+FROM Customer
+;
+
+// Ignore Dupicate
+SELECT COUNT(DISTINCT price)
+FROM order
+;
+```
+
+## SQL MIN 
+```MIN()``` return smallest value of selected column
+syntax:
+```SQL
+SELECT MIN(column_name)
+FROM table_name
+WHERE Condition
+;
+```
+
+Example
+```SQL
+SELECT MIN(price)
+FROM Order
+
+;
+```
+
+## SQL MAX 
+```MAX()``` return largest value of selected column
+syntax:
+```SQL
+SELECT MAX(column_name)
+FROM table_name
+WHERE Condition
+;
+```
+
+Example
+```SQL
+SELECT MAX(price)
+FROM Order
+;
+```
+
+## SQL SUM
+```SUM()``` function returns total sum of numeric column
+syntax:
+```SQL
+SELECT SUM(column_name)
+FROM table_name
+WHERE Condition
+;
+```
+
+Example
+```SQL
+SELECT SUM(price)
+FROM Order
+;
+
+SELECT SUM(price* quantity) As total_sum
+From Orders
+// As is Alias which gives temporary name to column
+```
+
+## SQL AVG
+```SUM()``` function returns the average value
+syntax:
+```SQL
+SELECT AVG(column_name)
+FROM table_name
+WHERE Condition
+;
+```
+
+Example
+```SQL
+SELECT AVG(price)
+FROM Order
+;
+
+# Day 9
+
+## SQL NULL Values
+A field with ```NULL Values``` is a field with no value. We will have to use ```IS NULL``` or  ```IS NOT NULL``` operator
+syntax:
+```SQL
+SELECT column_name
+FROM table_name
+WHERE column_name IS NULL
+;
+```
+
