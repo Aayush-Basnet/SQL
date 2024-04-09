@@ -81,12 +81,289 @@ TRUNCATE      | This is used to remove all records from a table, including all s
 
 # DAY 3
 ###  CREATE Table
-  ![](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Create%20Table.png)
+It is used to create table in a database.
+syntax:
+```SQL
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+);
+```
+  ![alt text](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Create%20Table.png)
 
 
 ###  ALTER Table
-  ![](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Alter%20Table.png)
+It is used to add or remove columns,keys,constraints and modify the data types of columns.<br>
+Syntax:
+```SQL  
+ALTER TABLE table_name
+ADD column_name datatype;
+```
+  ![alt text](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Alter%20Table.png)
 ###  DROP Table
-  ![](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Drop%20Table.png)
+It is used to drop existing table from the databases.
+<br>
+Syntax:
+```SQL
+DROP TABLE table_name;
+```
+  ![alt text](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Drop%20Table.png)
 ###  TRUNCATE Table
-  ![](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Truncate%20Table.png)
+It is used to delete the data inside the table but not the table itself.
+<br>
+Syntax:
+```SQL
+TRUNCATE TABLE table_name;
+```
+  ![alt text](https://github.com/Aayush-Basnet/SQL/blob/9cb0d5125b0ba59938389be6d92adc5366d771c7/Asset/Truncate%20Table.png)
+
+# Day 4
+
+:large_blue_diamond: SQL SELECT Statement
+* The ```SELECT``` Statement is used to select data from database
+* FROM is used to specify location of data
+
+```SQL
+SELECT column1, column2, ...
+FROM table_name
+;
+```
+![alt text]()
+:large_blue_diamond: SQL SELECT DISTINCT Statement
+The ```SELECT DISTINCT``` Statement is used to return only distinct(different) values
+
+```SQL
+SELECT DISTINCT column1, column2, ...
+FROM table_name
+;
+```
+![alt text]()
+
+:large_blue_diamond: SQL WHERE Clause
+The ```WHERE``` clause is used to filter records. It is used to extract only those records that fulfill specified condition.
+
+```SQL
+SELECT column1, column2, ...
+FROM table_name
+WHERE Contion
+;
+```
+![alt text]()
+
+
+:large_blue_diamond: COUNT:
+COUNT() is a built in function that retrieves the number of rows that matches the query crietaria .
+```SQL
+SELECT COUNT(*)
+FROM table_name
+WHERE Condition
+;
+```
+![alt text]()
+
+# Day 5 & 6
+* Today I learn about the Data Manipulation Languages and it's commands
+
+
+## SQL INSERT
+
+SQL Commands   |  Description
+---------------|-------------
+SELECT         |Retrieves data from one or more tables based on specified conditions
+INSERT         | 	Inserts new data into a table.
+DELETE          | Deletes data from a table based on specified conditions.
+UPDATE      | Modifies existing data in a table.
+
+
+## SQL INSERT 
+```INSERT INTO``` Statement is used to insert new records in a table
+Syntax:
+```SQL
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1.1, value1.2, value1.3, ...),
+(value2.1, value2.2, value2.3, ...)
+;
+```
+
+```SQL
+INSERT INTO table_name VALUES
+VALUES (value1.1, value1.2, value1.3, ...),
+(value2.1, value2.2, value2.3, ...)
+;
+```
+
+Example:
+```SQL
+Insert Into Customers values
+(1,'Alfreds Futterkiste','Maria Anders','Berlin','12209','German'),
+(2,'Ana Trujillo','Ana Trujillo', 'Tokyo','13235','Japan'),
+```
+
+## SQL UPDATE
+```UPDATE``` Statement is used to modify the existing records in a table
+Syntax:
+```SQL
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+```
+
+Example:
+```SQL
+UPDATE Customer
+SET Country  = 'Mexico'
+WHERE CustomerID = 1;
+```
+## SQL DELETE
+```DELETE``` Statement is used to delete existing records from a table.
+
+Syntax:
+```SQL
+DELETE FROM table_name WHERE condition;
+```
+Example:
+```SQL
+DELETE FROM Customer
+WHERE Country = 'Brazil';
+```
+
+Deleting all records from table
+Example:
+```SQL
+DELETE From Customer;
+```
+
+To delete table completely
+Example:
+```SQL
+DROP TABLE Customer
+```
+
+# Day 7
+* Today I learn about different SQL Clauses. Here I learn about LIMIT, ORDER BY
+SQL Commands   |  Description
+---------------|-------------
+LIMIT         |The LIMIT clause is used to restrict the number of rows returned by a SELECT statement
+ORDER BY         | 	The ORDER BY statement allows us to sort our results using the data in any column.
+
+:large_blue_diamond:LIMIT: 
+LIMIT is used for restricting the number of rows retrieved from databases.
+Example:
+```SQL
+Retrieve only 10 rows of data from Customer
+
+SELECT * FROM Customer
+LIMIT 10
+```
+## SQL ORDER BY
+```ORDER BY``` Statement is used to sort the result-set in ascending or descending order
+
+syntax:
+```SQL
+SELECT Column1, Column2,......
+FROM table_name
+WHERE Condition
+ORDER BY Column1, Column2,...
+;
+
+```
+
+Example:
+```SQL
+SELECT *
+FROM orders
+ORDER BY price DESC 
+;
+// Result are ordered in descending order
+```
+
+# SQL Operators
+Operators      |  Sign
+---------------|-------------
+Arithmetric    | +,-,/,*
+Logical        | OR, AND, NOT
+Comparision    | =, <=,>= <>,!=
+
+## SQL AND
+```AND``` operator is used to filter records based on more than one condition. ```AND``` operator display a record if all condition are TRUE.
+syntax:
+```SQL
+SELECT Column1, Column2,......
+FROM table_name
+WHERE Condition1 AND Condition2........
+;
+```
+
+Example:
+```SQL
+SELECT *
+FROM Customer
+WHERE Country = 'Germany' AND City = 'Berlin'
+;
+```
+
+## SQL OR
+```OR``` operator is used to filter records based on more than one condition.  ```OR``` operator display a record if any of condition are TRUE.
+syntax:
+```SQL
+SELECT Column1, Column2,......
+FROM table_name
+WHERE Condition1 OR Condition2........
+;
+```
+
+Example:
+```SQL
+SELECT *
+FROM Customer
+WHERE Country = 'Germany' OR City = 'Tokyo'
+;
+```
+## SQL NOT
+```NOT``` operator is used in combination with other operators to give opposite result i.e. negative result. 
+syntax:
+```SQL
+SELECT Column1, Column2,......
+FROM table_name
+WHERE NOT Condition
+;
+```
+
+Example:
+```SQL
+SELECT *
+FROM Customer
+WHERE NOT Country  = 'Germany' 
+;
+```
+
+```SQL
+SELECT *
+FROM Customer
+WHERE Country NOT IN  ('Germany','Brazil') 
+;
+```
+
+```SQL
+SELECT *
+FROM Customer
+WHERE NOT price > 1500
+;
+```
+We can use operators like  =, <=,>= <>,!= to filter the search.
+The following operators can be used in WHERE Clause
+Example:
+```SQL
+SELECT *
+FROM Customer
+WHERE CustomerID Between 10 AND 20  // Between is used to determine certain range of values
+;
+
+
+SELECT *
+FROM Customer
+WHERE City LIKE 's%'  // City name that started by S
+; 
+```
