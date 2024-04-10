@@ -12,9 +12,9 @@ Here is where I will keep logs of what I am learning!
 Days         | Skill learned  | Topic Content
 ----------   | -------------  | -------------
 Day 1-7      | Basic SQL      | SQL, DBMS, SQL Commands, DDL, DML
-Day 8-9      | Aggregrate Function, LIKE & Wildcards, Aliases  | AVG, MIN, MAX, SUM, COUNT,AS, IN, TOP, LIKE
-Day 10-13    | SQL Joins  | Inner Join, Outer Join, Self Join, Cartesian Product
-Day 18-21    | Intermediate SQL  | UNION, GROUP BY, HAVING, EXISTS, PARTITION BY
+Day 8-9      | Aggregrate Function, LIKE & Wildcards, Aliases  | AVG, MIN, MAX, SUM, COUNT,AS, IN, TOP, LIKEr
+Day 10-12    | SQL Joins  | Inner Join, Outer Join, Left/Right Join ,Self Join
+Day 13-16    | Intermediate SQL  | UNION, GROUP BY, HAVING, EXISTS, PARTITION BY
 Day 22-24    | CASE Statement  | CASE
 Day 25-29    | Common Table Expression  |
 Day 30       | Temporary Tables   |
@@ -567,4 +567,128 @@ WHERE Customer_Name LIKE '[bsp]%';
 SELECT *
 FROM Customer
 WHERE Customer_Name LIKE '[a-f]%';
+```
+
+# DAY 10
+## SQL JOINS
+```JOIN``` clause is used to combine rows from two or more tables, based on related column between them.
+
+Example
+```SQL
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+```
+![alt text](https://github.com/Aayush-Basnet/SQL/blob/504323f7cbd460e309c9f6621190641951402805/Asset/Screenshot%202024-04-10%20164630.png)
+
+Here are the differetn types of JOINS in SQL:
+* ```INNER JOIN```: Returns records that have matching values in both tables
+* ```LEFT (OUTER) JOIN``` : Returns all records from the left table, and the matched records from the right table
+* ```RIGHT (OUTER) JOIN``` : Returns all records from the right table, and the matched records from the left table
+* ```FULL(OUTER) JOIN``` : Returns all records when there is a match in either left or right table
+
+:large_blue_diamond: INNER JOIN
+```INNER JOIN``` keyword selects records that have matching values in both tables.
+Syntax
+```SQL
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+```
+
+Example:
+```SQL
+SELECT ProductID, ProductName, CategoryName
+FROM Products
+INNER JOIN Categories ON Products.CategoryID = Categories.CategoryID;
+
+Note: The ```INNER JOIN``` keyword returns only rows with a match in both tables. Which means that if you have a product with no CategoryID, or with a CategoryID that is not present in the Categories table, that record would not be returned in the result.
+```
+## JOIN or INNER JOIN
+```JOIN``` and ```INNER JOIN``` will return the same result. ```INNER``` is default join type for ```JOIN```, so when you write ```JOIN``` the parser actually writes ```INNER JOIN```.
+
+## JOIN Three Tables
+Example:
+```SQL
+SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+FROM ((Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID);
+```
+# DAY 11
+:large_blue_diamond: LEFT JOIN
+```LEFT JOIN``` keyword selects records all records from the left table (table1) and matching records from the right table (table2). The result is 0 records from the right side, if there is no match.
+Syntax:
+```SQL
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+Example:
+```SQL
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+Note: The ```LEFT JOIN``` keyword returns all records from the left table (Customers), even if there are no matches in the right table (Orders).
+```
+
+:large_blue_diamond: RIGHT JOIN
+```RIGHT JOIN``` keyword selects records all records from the right table (table2) and matching records from the left table (table1). The result is 0 records from the left side, if there is no match.
+Syntax:
+```SQL
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+Example:
+```SQL
+SELECT Orders.OrderID, Employees.LastName, Employees.FirstName
+FROM Orders
+RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+ORDER BY Orders.OrderID;
+
+Note: The ```RIGHT JOIN``` keyword returns all records from the right table (Employees), even if there are no matches in the left table (Orders).
+```
+
+# DAY 12
+:large_blue_diamond: SQL FULL OUTER JOIN
+```FULL OUTER JOIN``` keyword selects records all records all records when there is a match in left (table1) or right(table2) table records.
+
+Syntax:
+```SQL
+SELECT column_name(s)
+FROM table1
+FULL OUTER JOIN table2
+ON table1.column_name = table2.column_name
+WHERE condition;
+```
+Example:
+```SQL
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;
+```
+
+:large_blue_diamond: SQL Self JOIN
+```Self JOIN``` is a regular join, but the table is joined with itself.
+
+Syntax:
+```SQL
+SELECT column_name(s)
+FROM table1 T1, table1 T2
+WHERE condition;
+```
+Example:
+```SQL
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City;
 ```
