@@ -692,3 +692,78 @@ WHERE A.CustomerID <> B.CustomerID
 AND A.City = B.City
 ORDER BY A.City;
 ```
+
+# Day 13 & 14
+## SQL UNION Operator
+The ```UNION``` operator is used to combine the result set of two or more ```SELECT``` statement.
+* Every ```SELECT``` statement with ```UNION``` must have the same number of columns.
+* The columns must also have similar data types.
+* The columns in every ```SELECT``` statement must also be in same order.
+
+Note: To allow duplicate values, use UNION ALL
+Syntax:
+```SQL
+SELECT column_name(s)
+FROM table1 T1
+UNION
+SELECT column_name(s);
+```
+Example:
+```SQL
+SELECT City, Country
+FROM Customers
+Where Country = 'Germany'
+UNION
+SELECT City, Country
+FROM Suppliers
+Where Country = 'Germany'
+ORDER BY City;
+```
+
+## GROUP BY
+The ```GROUP BY``` statement groups rows that have same values into summary rows, like 'find the number of customers in each country'.
+The ```GROUP BY``` statement is often used with aggregate functions (```COUNT()```,```MAX()```,```MIN()```,```SUM()```,```AVG()```) to group the result-set by one or more columns.
+Syntax:
+```SQL
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s);
+```
+
+Example:
+```SQL
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+ORDER BY COUNT(CustomerID) DESC;
+```
+
+### GROUP BY With JOIN 
+Example:
+```SQL
+SELECT Shippers.ShipperName, COUNT(Orders.OrderID) AS NumberOfOrders FROM Orders
+LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
+GROUP BY ShipperName;;
+```
+# SQL HAVING Clause
+The ```HAVING``` clause was added to SQL because the ```WHERE``` keyword cannot be used with aggregate functions.
+Syntax:
+```SQL
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+HAVING condition
+ORDER BY column_name(s);
+```
+
+Example:
+```SQL
+SELECT Employees.LastName, COUNT(Orders.OrderID) AS NumberOfOrders
+FROM (Orders
+INNER JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID)
+GROUP BY LastName
+HAVING COUNT(Orders.OrderID) > 10;
+```
