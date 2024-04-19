@@ -209,7 +209,7 @@ FROM PortfolioProject..layoffs;
 Update PortfolioProject..layoffs
 Set date = CONVERT(Date, [date]); -- While it showed rows affected but didn't show any changes in table, so there is another way I should try
 
-
+-- We try another way
 
 Select [date]
 From PortfolioProject..layoffs
@@ -238,7 +238,7 @@ AND percentage_laid_off IS NULL;
 ---------------------------------------------------------------------------------------------------------------------------------
 
 Select * From PortfolioProject..layoffs
-where company = 'Netflix'
+
 
 -- Well now we have 1992 rows and 9 column
 
