@@ -22,8 +22,16 @@ Day 31-34    | String Functions  |
 Day 35-36    | Ranking Function  |
 Day 37+      | Advance SQL  |
 
+---------------------------------------------------------------------------------------------------------------------
 
+| SQL Projects      |
+-----------------------
+[COVID-19 Data Exploration](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Project/Covid%20Exploration%20Project.sql)
+[Nashville Housing Data Cleaning](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Project/Nashville%20Housing%20Data%20Cleaning.sql)
+[SQL Murder Mystery Game](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Project/SQL-Murder-Mystery.sql)
+[Company Layoffs](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Data%20Cleaning.sql)
 
+---------------------------------------------------------------------------------------------------------------------------------------------
 # DAY 1 of 'Learning SQL'
 
 
