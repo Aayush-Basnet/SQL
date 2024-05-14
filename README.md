@@ -16,20 +16,21 @@ Day 8-9      | Aggregrate Function, LIKE & Wildcards, Aliases  | AVG, MIN, MAX, 
 Day 10-12    | SQL Joins  | Inner Join, Outer Join, Left/Right Join ,Self Join
 Day 13-16    | Intermediate SQL  | UNION, GROUP BY, HAVING, EXISTS, PARTITION BY
 Day 22-24    | CASE Statement  | CASE
-Day 25-29    | Common Table Expression  |
+Day 25-29    | Common Table Expression  | CTE
 Day 30       | Temporary Tables   |
-Day 31-34    | String Functions  |
-Day 35-36    | Ranking Function  |
-Day 37+      | Advance SQL  |
+Day 31-34    | String Functions  | UPPER, LOWER, SUBSTRING, CONCAT, TRIM
+Day 35-36    | Window Function  | RANK, DENSE RANK, ROW NUMBER, LEAD/LAG
+Day 37+      | Advance SQL  | PARTITION BY, Store Procedure, View, Temp Table
+SQL Project  | [Project](https://github.com/Aayush-Basnet/SQL/tree/main/SQL%20Project)
 
 ---------------------------------------------------------------------------------------------------------------------
 
- SQL Projects      
-------------------
-[COVID-19 Data Exploration](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Project/Covid%20Exploration%20Project.sql)    
-[Nashville Housing Data Cleaning](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Project/Nashville%20Housing%20Data%20Cleaning.sql)   
-[SQL Murder Mystery Game](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Project/SQL-Murder-Mystery.sql)  
-[Company Layoffs](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Data%20Cleaning.sql)   
+| SQL Projects  |    
+| ---------------- |
+| [COVID-19 Data Exploration](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Project/Covid%20Exploration%20Project.sql)   |
+| [Nashville Housing Data Cleaning](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Project/Nashville%20Housing%20Data%20Cleaning.sql)   |
+| [SQL Murder Mystery Game](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Project/SQL-Murder-Mystery.sql)  |
+| [Company Layoffs](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Data%20Cleaning.sql)   |
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 # DAY 1 of 'Learning SQL'
