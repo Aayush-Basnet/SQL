@@ -12,11 +12,12 @@ Here is where I will keep logs of what I am learning!
 
 Skill learned  | Topic Content
 -------------  | -------------
-Basic SQL      | SQL, DBMS, SQL Commands, DDL, DML
+SQL      | SQL, DBMS, SQL Commands, DDL, DML
 DDL & DML    | UPDATE, DELETE, DROP, CREATE, ALTER, TRUNCATE
+Other SQL Queries  | LIKE, Wildcards, DISTINCT, ORDER BY, NULL VALUES, Aliases, In, Between, Select Top, SQL Operators
 Aggregrate Function | AVG, MIN, MAX, SUM, COUNT
 SQL Joins  | Inner Join, Outer Join, Left/Right Join ,Self Join
-Intermediate SQL  | UNION, GROUP BY, HAVING, EXISTS, PARTITION BY, Window Function
+Intermediate SQL  | UNION, GROUP BY, HAVING, EXISTS, PARTITION BY, Window Function. Null Functions
 CASE Statement  | CASE
 Common Table Expression  | CTE
 Temporary Tables   |
