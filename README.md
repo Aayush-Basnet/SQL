@@ -38,6 +38,7 @@ SQL Tutorial       | [Learning Logs](https://github.com/Aayush-Basnet/SQL/blob/m
 | [Adidas Sales Analysis](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Project/Adidas%20Sales%20Analysis.sql)|
 | [Pizza Sales Analysis](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Project/pizza_sales_sql.sql)   |
 |[Target Sales Analysis(sql-python-project)](https://github.com/Aayush-Basnet/SQL-Python-Ecommerce-project)  |
+|[Advance SQL Queries](https://github.com/Aayush-Basnet/SQL/blob/main/SQL%20Project/AdvanceSQLQueries.sql)|
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 # DAY 1 of 'Learning SQL'
